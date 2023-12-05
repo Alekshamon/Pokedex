@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import './App.css'
-
 import PokemonCard  from "./components/PokemonCard"
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -43,9 +45,7 @@ function App() {
     
       <div>
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      <button onClick={handleClickPrev}>Précédent</button>
-      <button onClick={handleClickNext}>Suivant</button>
-      
+      <NavBar onPrevClick={handleClickPrev} onNextClick={handleClickNext} />
       </div>
        
       
