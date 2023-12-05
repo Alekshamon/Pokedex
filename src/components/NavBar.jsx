@@ -2,11 +2,14 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-const NavBar = ({ onPrevClick, onNextClick }) => {
+const NavBar = ({ pokemonList, onPokemonClick }) => {
     return (
       <div>
-        <button onClick={onPrevClick}>Précédent</button>
-        <button onClick={onNextClick}>Suivant</button>
+{pokemonList.map((pokemon, i) =>(
+<button key={i} onClick={() => onPokemonClick (i)}>{pokemon.name}
+</button>
+) )}
+        
       </div>
     );
   };
